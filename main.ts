@@ -11,7 +11,7 @@ if (import.meta.main) {
     <array>🌏</array>
     <number>42</number>
     <boolean>true</boolean>
-    <complex attribute="value">content</complex>
+    <complex attribute="value"><![CDATA[ <content>CONTENT</content> ]]></complex>
   </root>
 `));
 }
