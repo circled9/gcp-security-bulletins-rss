@@ -1,8 +1,17 @@
-export function add(a: number, b: number): number {
-  return a + b;
-}
+import { parse } from "https://deno.land/x/xml@2.1.3/mod.ts";
 
-// Learn more at https://deno.land/manual/examples/module_metadata#concepts
 if (import.meta.main) {
-  console.log("Add 2 + 3 =", add(2, 3));
+  console.log(parse(`
+  <root>
+    <!-- This is a comment -->
+    <text>hello</text>
+    <array>world</array>
+    <array>monde</array>
+    <array>世界</array>
+    <array>🌏</array>
+    <number>42</number>
+    <boolean>true</boolean>
+    <complex attribute="value">content</complex>
+  </root>
+`));
 }
